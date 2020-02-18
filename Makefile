@@ -4,11 +4,11 @@ LDFLAGS=-L.
 BINARY=main
 
 
-main: main.o list.o 
+main: main.o collections.o 
 	$(CC) -o $(BINARY) $(LDFLAGS) $^
 
 main.o: main.c
 	$(CC) -c -o $@ $(CFLAGS) $^
 
-list.o: list.c list.h
+collections.o: collections.c collections.h
 	$(CC) -c -o $@ $(CFLAGS) $<

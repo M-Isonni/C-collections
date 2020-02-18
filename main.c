@@ -1,4 +1,4 @@
-#include "list.h"
+#include "collections.h"
 #define TRUE 1
 #define FALSE 0
 
@@ -24,5 +24,15 @@ int main(){
     free(value);
     len = get_list_size(list);
     printf("length: %d\n",len);
+
+    printf("Dictionary:\n");
+    dictionary_t* dict = make_dict(10);
+    int a = 5;
+    int* key = &a;
+    int* v = &a;
+    add_item_to_dict(dict,key,v,sizeof(int));
+    key_value_pair_t* k_v = get_item_from_dict(dict,key,sizeof(int));    
+    int gotten_value = *(int*)k_v->value;
+    printf("Value: %d\n",gotten_value);    
     return 0;
 }
