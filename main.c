@@ -4,7 +4,7 @@
 
 int main(){   
     printf("open\n"); 
-    char* data = "ciao";
+    char* data = "Hello world";
     int* value = malloc(sizeof(int));
     *value=5;
     list_t* list = make_list();

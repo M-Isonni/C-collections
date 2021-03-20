@@ -4,23 +4,27 @@
 
 #define HASH_MODIFIER 31
 
-typedef struct node{
+typedef struct node
+{
     void* data;
     struct node* next;
 }node_t;
 
-typedef struct list{
+typedef struct list
+{
     node_t* head;
 }list_t;
 
-typedef struct key_value_pair{
+typedef struct key_value_pair
+{
     void* key;
     void* value;
     size_t key_size;
     struct key_value_pair* next;
 }key_value_pair_t;
 
-typedef struct dictionary{
+typedef struct dictionary
+{
     unsigned long size;
     size_t hash_map_size;
     key_value_pair_t** hash_map;
